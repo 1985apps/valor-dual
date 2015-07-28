@@ -1,0 +1,10 @@
+---
+s3: 
+  access_key: '**********'
+  secret_access_key: '*****************************'
+  region: '*************'
+  bucket: '************'
+versions:
+  small: '150x150'
+  large: '600x500'
+
