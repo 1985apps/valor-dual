@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'valor-dual'
-  s.version     = '0.1.0'
+  s.version     = '0.1.1'
   s.date        = '2015-07-17'
   s.summary     = "Valor-Dual - image resizer!"
   s.description = "A simple image resizer which converts image into different resolutions and pushes them onto AWS S3 bucket."

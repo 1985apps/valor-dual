@@ -9,13 +9,13 @@ The [Mini Magick](https://github.com/minimagick/minimagick) and [AWS SDK](https:
 To check if above gems are installed on your system
 
 ```sh
-$gem list
+$ gem list
 ```
 #installation
 
 To install valor-dual into the system, run 
 ```sh
-	$sudo gem install valor-dual
+$ sudo gem install valor-dual
 ```
 
 #usage

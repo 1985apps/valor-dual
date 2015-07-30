@@ -1,6 +1,3 @@
-require 'yaml'
-require 'uri'
-
 class ValorDual
 
   def initialize(path)
@@ -48,9 +45,21 @@ class ValorDual
     return @array_of_dumps
   end
 
-  def fetch version
-    version_name = @array_of_dumps.find{|i| i['version'] == version }
-    (version_name.nil?) ? "Specify correct version" : version_name["public_url"]
+  def fetch (version = nil)
+    if version.nil?
+      return @array_of_dumps.map{|i| i["public_url"]}
+    end
+
+    if self.is_version?(version) == true
+      return @array_of_dumps.find{|i| i['version'] == version }["public_url"]
+    else
+      return "Invalid version, check your config file"
+    end
+
+  end
+
+  def is_version?(version)
+    is_version = @versions.any?{ |key, value| key == version}
   end
 
 end
